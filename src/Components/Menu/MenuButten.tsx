@@ -13,7 +13,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ onButtonClick, activeCategory }
     "https://s3-alpha-sig.figma.com/img/0571/aff9/d875fd6fec8f3801ba095cc39be0e4b1?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RFxLpkEjoVAaVTqtbYQ6wCIrA6xu5Su4oaxaoU4fJXge9N0oT5bfhXf1MvvYyEQKDDglsuCzYjW5UH11gUKShNqp0lx2KqvyRyo7tcQ-UVU9aTd2V8VYR~TT-Bedh6cVgRzyk0b08d~vnAymLEUHwTe29hrgkmqdPUaNYGA9bZLf~vWpJdktWALZ7Rqy30ri3KbMzBJe9nS9zY0dhrPpZn-iojkhXLUAleFXqJ2Q7K4BX-FkenzVxoWVW-5Ig79YAfzOl1XCnnmgR3iGKKTuZrDcAHWqe-BspqDDRhXcEKwSKHRusOF6pFsUJUTFjMA0OrcDjHm~BGtN3WyLNzCJkQ__";
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 relative">
+    <div className="grid grid-cols-1 sm:grid-cols-3 relative">
       {[...Array(3)].map((_, index) => (
         <div key={index} className="relative group">
           <img

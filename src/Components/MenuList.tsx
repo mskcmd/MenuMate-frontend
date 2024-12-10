@@ -13,8 +13,6 @@ const MenuList: React.FC<MenuListProps> = ({
   onButtonClick,
 }) => {
   const [menuData, setMenuData] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   const activeCategory = selectedValue || "FOOD";
   console.log(activeCategory);
@@ -22,9 +20,10 @@ const MenuList: React.FC<MenuListProps> = ({
   useEffect(() => {
     const fetchMenuData = async () => {
       try {
-        setIsLoading(true);
         const response = await fetch(
-          `${import.meta.env.VITE_REACT_APP_B_URI}/getMenu/?header=${activeCategory}`
+          `${
+            import.meta.env.VITE_REACT_APP_B_URI
+          }/getMenu/?header=${activeCategory}`
         );
 
         if (!response.ok) {
@@ -33,20 +32,13 @@ const MenuList: React.FC<MenuListProps> = ({
 
         const data = await response.json();
         setMenuData(data);
-        setIsLoading(false);
       } catch (err) {
-        setError(
-          err instanceof Error ? err.message : "An unknown error occurred"
-        );
-        setIsLoading(false);
+        console.log(err);
       }
     };
 
     fetchMenuData();
   }, [activeCategory]);
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
 
   console.log("menuData", menuData);
 
