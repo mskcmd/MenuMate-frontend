@@ -7,7 +7,6 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   console.log(isMenuOpen);
-  
 
   const navItems = [
     { name: "HOME", href: "#home" },
@@ -25,7 +24,7 @@ const Header = () => {
           <div className="flex items-center">
             <img
               src={logo}
-              className="h-24 lg:h-24 ml-2  "
+              className="h-24 lg:h-24 ml-16"
               alt="Deep Net Soft Logo"
             />
             <div className="hidden lg:block text-4xl mt-3 font-oswald">
@@ -39,7 +38,7 @@ const Header = () => {
         </div>
 
         {/* Navigation for Desktop */}
-        <nav className="hidden lg:flex space-x-6">
+        <nav className="hidden lg:flex space-x-6 me-5 mt-8">
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -96,7 +95,10 @@ const Header = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
         <div className="text-center py-28 px-4 max-w-2xl mx-auto relative z-10">
-          <h1 className="text-6xl font-oswald font-medium text-[#FFFFFF] mb-4 shadow-[7px_7px_0px_#800020, 15px_15px_0px_#800020] text-shadow-lg">
+          <h1
+            className="text-6xl font-oswald font-medium text-[#FFFFFF] mb-4 shadow-[7px_7px_0px_#800020, 15px_15px_0px_#800020] text-shadow-lg"
+            style={{ textShadow: "3px 3px 0px #800020" }}
+          >
             MENU
           </h1>
 
