@@ -41,7 +41,7 @@ const ItemList: React.FC<ItemListProps> = ({ items, activeCategory }) => {
           <img
             src="https://s3-alpha-sig.figma.com/img/08f1/ba92/09e436820849a421ec0b1fe5126bf9b5?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qvOq7OcG7YwIPJNlFbFB3y6vjgh3b1ytbdNuPQLw-x3HnXoAVXRVWdrWeTnYFyyxQDF0r8XD1n~EZblmk3moMwVN205oycp~2KM4lLCsilx9NElDgJLWsEdBm4a0sA9gjjnBo413ixA-I~~1Ogo10apbZZWPUqRdjoMsozb8wHTW3oIDCx-i5eXyAOMpf~OuDurY8TsCSoAyMoeIY5w865hc9usKFD8hsrTeyf7EAp~VJ2FtT2OrP2fgJXodSSRh9mYLuA8JpOeFpSP2yTMfa8io4ggxn15Xc22dq0ZlaLlsCxyN9jbYd-7TNS8pwnQ-VTOXJkoP0DrJH6Nbt6UPag__"
             alt="Decorative"
-            className="absolute  sm:top-[-100px] sm:left-[-50px] sm:w-[170px] sm:h-[250px] top-[-10px] left-[-17px] w-[100px] h-[130px]"
+            className="absolute  sm:top-[-110px] sm:left-[-50px] sm:w-[170px] sm:h-[250px] top-[-10px] left-[-17px] w-[100px] h-[130px]"
           />
           <img
             src="https://s3-alpha-sig.figma.com/img/6b91/b238/f07a69022d4c64e313237eadaceb997f?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YG1FYzxRykOuaKV2-SvezP7g9vWy6da6y0pSazPtWBcQKcIP860XEQx9WOOk6yH6isJSNgl3cHFosz4SoPNXeMcD2y-9qn87YpnaXuPqzSYNBtgV5CEtIj8vjZMAKiqjAgkLKEk~5PKGVZV40aXecGz1vWC6DlmzyT28z-yr~sqx~dT~jJW15LHGt-gFIwLvASlGKhLz4Tb58-sqmL0LkseU0-8-VE9RyL0F6eUNFH16ZOnW~EDTH4ywvriTf1kKeo4dvb10X~CaYBFD8S2n6JNCtkjwAW4G--gpzKfDoYczZd9neLGrcOLRO6q6SbAyn4OB3bK44jkopBhija-7EA__"
@@ -73,12 +73,12 @@ const ItemList: React.FC<ItemListProps> = ({ items, activeCategory }) => {
                 <div key={index} className="">
                   <h2 className="flex items-center text-white text-xl font-oswald">
                     <span className="mr-2">{item.name}</span>
-                    <span className="flex-grow border-t-4 border-dotted border-white mx-2"></span>
-                    <span className="font-bold">${item.price.toFixed(2)}</span>
+                    <span className="flex-grow border-t-4 border-dotted border-white mt-3 me-2"></span>
+                    <span className="font-bold"> ${item.price.toFixed(2)}</span>
                   </h2>
 
                   <p className="text-[#BBBBBB] font-KellySlab mt-2">
-                    {item.description}
+                      {item.description}
                   </p>
                 </div>
               ))}
