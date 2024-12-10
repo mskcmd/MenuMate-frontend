@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
-// Define types for the props injected by the HOC
 interface WithButtonStateProps {
   selectedValue: string;
   onButtonClick: (value: string) => void;
 }
 
-// Define a Higher-Order Component (HOC)
 const withButtonState = <P extends object>(
   WrappedComponent: React.ComponentType<P & WithButtonStateProps>
 ) => {
